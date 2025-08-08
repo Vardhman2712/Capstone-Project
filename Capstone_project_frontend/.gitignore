@@ -1,0 +1,47 @@
+# Node modules
+node_modules/
+
+# Production build output
+.next/
+out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Optional: TypeScript build info
+*.tsbuildinfo
+
+# Optional: Mac system files
+.AppleDouble
+.LSOverride
+
+# Optional: Optional test output or coverage
+coverage/
+jest-output/
+
+# Next.js export static files (if using `next export`)
+out/
+
+# Optional: Swings or snapshots
+*.swp
+*.swo
