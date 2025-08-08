@@ -37,22 +37,12 @@ cloudinary.api
   });
 
 // Configure MySQL connection
-// const pool = mysql.createPool({
-//   host: process.env.DB_HOST || "localhost",
-//   user: process.env.DB_USER || "root",
-//   port: process.env.DB_PORT, // ADD THIS
-//   password: process.env.DB_PASSWORD || "password",
-//   database: process.env.DB_NAME || "capstone_portal",
-//   waitForConnections: true,
-//   connectionLimit: 10,
-//   queueLimit: 0,
-// });
-
 const pool = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  // password: process.env.DB_PASSWORD || "password",
-  database: "capstone_portal",
+  host: process.env.DB_HOST || "localhost",
+  user: process.env.DB_USER || "root",
+  port: process.env.DB_PORT ? Number(process.env.DB_PORT) : 3306,
+  password: process.env.DB_PASSWORD || "",
+  database: process.env.DB_NAME || "capstone_portal",
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
@@ -2354,7 +2344,7 @@ app.get(
 );
 
 // Start the server
-const PORT = process.env.DB_PORT || 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
